@@ -1,5 +1,6 @@
 /* CSS Variables and Responsive Breakpoints */
 /* Desktop: 1024px+, Tablet: 768px-1023px, Mobile: <768px */
+/* All sections optimized for touch-friendly mobile-first design */
 
 :root {
     --color-primary: #6366f1;
