@@ -7,16 +7,28 @@ Xây dựng một trang portfolio cá nhân sử dụng HTML5 semantic elements,
 ```
 session_01_portfolio_html_css/
 ├── index.html              ← Complete HTML file (header, hero, about, skills, portfolio, contact, footer)
-├── style.css               ← Complete styling with responsive breakpoints
-├── main.js                 ← JavaScript for scroll animations
 ├── README.md               ← This file
-├── anh the 2.jpg           ← Profile photo
-├── e-commerce.jpg          ← Portfolio image 1
-├── data-analytics.png      ← Portfolio image 2
-├── SaaS.png                ← Portfolio image 3
-├── food-app.png            ← Portfolio image 4
-├── fitness-tracker.png     ← Portfolio image 5
-└── brand-design.jpg        ← Portfolio image 6
+├── css/                    ← Modular CSS stylesheets
+│   ├── variables.css       ← CSS custom properties (colors, fonts, spacing)
+│   ├── base.css            ← Global reset and base styles
+│   ├── header.css          ← Header and navigation styling
+│   ├── hero.css            ← Hero section styling
+│   ├── about.css           ← About section styling
+│   ├── skills.css          ← Skills section with progress bars
+│   ├── portfolio.css       ← Portfolio gallery and lightbox
+│   ├── contact.css         ← Contact form styling
+│   ├── footer.css          ← Footer styling
+│   └── responsive.css      ← Media queries for responsive design
+├── js/                     ← JavaScript files
+│   └── main.js             ← Scroll animations with IntersectionObserver
+└── images/                 ← Project images
+    ├── anh the 2.jpg       ← Profile photo
+    ├── e-commerce.jpg      ← Portfolio image 1
+    ├── data-analytics.png  ← Portfolio image 2
+    ├── SaaS.png            ← Portfolio image 3
+    ├── food-app.png        ← Portfolio image 4
+    ├── fitness-tracker.png ← Portfolio image 5
+    └── brand-design.jpg    ← Portfolio image 6
 ```
 
 ## 📋 Cấu trúc bài
@@ -45,6 +57,20 @@ session_01_portfolio_html_css/
 - HTML5
 - CSS3 (Grid, Flexbox, Variables, Media Queries)
 - Vanilla JavaScript (IntersectionObserver API)
+
+## 🏗️ Kiến trúc CSS Modular
+Project sử dụng kiến trúc CSS modular để dễ bảo trì và mở rộng:
+- **variables.css**: Định nghĩa CSS custom properties cho colors, fonts, spacing
+- **base.css**: Reset global và base styles cho tất cả elements
+- **component-specific files**: Mỗi component (header, hero, about, skills, portfolio, contact, footer) có file CSS riêng
+- **responsive.css**: Tất cả media queries cho các breakpoint (desktop, tablet, mobile)
+
+Cách tiếp cận này giúp:
+- Dễ maintain và debug
+- Tái sử dụng CSS variables across components
+- Tách biệt logic styling theo component
+- Dễ mở rộng khi thêm feature mới
+
 
 ## 📱 Responsive Design
 - Desktop (1024px+): 3-column portfolio, 2-column contact
@@ -82,6 +108,7 @@ python -m http.server 8000
 ```
 
 ## 📝 Commit History
-Tổng cộng 13 commits:
+Tổng cộng 14 commits:
 - 12 commits ban đầu theo quy tắc [TYPE] Description
 - 1 commit thêm ảnh và cập nhật đường dẫn
+- 1 commit refactor với modular CSS architecture và folder organization
